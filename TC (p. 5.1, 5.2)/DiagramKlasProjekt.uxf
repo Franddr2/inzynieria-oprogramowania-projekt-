@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>72</y>
+      <w>207</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Operator
+--
+-idOperatora : int
+-imie : String
+-nazwisko : String
+--
++przydzielanieMisji() : void
++tworzenieZespolu() : void
++wyslanieDrona() : void
++wysłanieKomunikatu(): void
++przymijZgloszenie() : void
++zamknijZgloszenie() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>324</y>
+      <w>162</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>DronZwiadowczy
+--
+-idDrona : int
+-status : String
+-lokalizacja : String
+--
++startZwiadu() : void
++pokazObraz() : void
++powrotDoBazy() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>234</y>
+      <w>90</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+wysyła
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>60.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>342</y>
+      <w>180</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Zgloszenie
+--
+-idZgloszenia : int
+-data : Date
+-rodzaj : String
+-stopien : int
+-lokalizacja : String
+-krotkiOpis : String
+--
++algorytmPrzydzielania() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>234</y>
+      <w>99</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+obsluguje
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;120.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>171</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>DziennikZgloszen
+--
+-ileZgloszen : int
+-ileSukces : int
+-ilePorazka : int
+--
++generujDziennik() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>477</x>
+      <y>261</y>
+      <w>117</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+przechowuje</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>117</y>
+      <w>207</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+przegląda
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;60.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>468</y>
+      <w>72</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+tworzy</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>585</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Misja
+--
+-idMisji : int
+-status : String
+-dataRozpoczecia : Date
+-dataZakonczenia : Date
+--
++startMisji() : void
++koniecMisji() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>396</y>
+      <w>153</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ZespolOperacyjny
+--
+-idZespolu : int
+-iloscBohaterow : int
+-poziomSynergii : float
+--
+-dodajBohatera() : void
+-usunBohatera() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>234</y>
+      <w>81</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1
+m1=0..*
+tworzy</panel_attributes>
+    <additional_attributes>10.0;180.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>783</x>
+      <y>603</y>
+      <w>171</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>Bohater
+--
+-idBohatera : int
+-imie : String
+-nazwisko : String
+-dataUrodzenia : Date
+-pseudonim : String
+-status : String
+-stanZdrowia : String
+-StanEnergii : String
+-lokalizacja : String
+-czyKamera : Boolean
+--
++zmienStatus() : void
++obrazZKamery() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>495</y>
+      <w>81</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=2..*
+składa się</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>495</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+przydzielona</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>585</y>
+      <w>162</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+przydzielona</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>234</y>
+      <w>81</w>
+      <h>387</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1
+nadzoruje
+m1=0..*</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>432</y>
+      <w>81</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..*
+poszukuje
+m1=1</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>891</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Moc
+--
+-idMocy : int
+-nazwa : String
+-typ : String
+-zasieg : String
+-ograniczenia : String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>774</x>
+      <y>810</y>
+      <w>72</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+posiada
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>855</y>
+      <w>153</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>KatalogMocy
+--
+-opisZdolnosci : String 
+-liczbaMocy : int
+--
++wyszukajMoc() : void
++filtrujTyp() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>936</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+przechowuje</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>162</y>
+      <w>324</w>
+      <h>711</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+przegląda</panel_attributes>
+    <additional_attributes>280.0;770.0;280.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>855</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Raport
+--
+-idRaportu : int
+-dataRaportu : Date
+-tresc : String
+--
++Przeslij() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>603</x>
+      <y>756</y>
+      <w>198</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=1
+generuje</panel_attributes>
+    <additional_attributes>10.0;110.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>693</y>
+      <w>72</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+dotyczy</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>90</y>
+      <w>414</w>
+      <h>801</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=1
+odbiera</panel_attributes>
+    <additional_attributes>160.0;860.0;10.0;860.0;10.0;10.0;440.0;10.0</additional_attributes>
+  </element>
+</diagram>
