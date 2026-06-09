@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.1">
+<diagram program="umlet" version="15.0.0">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLActor</id>
@@ -7,7 +7,7 @@
       <x>320</x>
       <y>190</y>
       <w>80</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Operator</panel_attributes>
     <additional_attributes/>
@@ -15,9 +15,9 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>280</x>
+      <x>290</x>
       <y>460</y>
-      <w>80</w>
+      <w>60</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>Bohater
@@ -27,9 +27,9 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>290</x>
+      <x>300</x>
       <y>660</y>
-      <w>80</w>
+      <w>60</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>System
@@ -208,7 +208,7 @@ o mocach</panel_attributes>
       <w>720</w>
       <h>840</h>
     </coordinates>
-    <panel_attributes>System CRS
+    <panel_attributes>System CKS
 halign=left</panel_attributes>
     <additional_attributes/>
   </element>
@@ -362,7 +362,7 @@ krytycznego</panel_attributes>
     <coordinates>
       <x>740</x>
       <y>450</y>
-      <w>200</w>
+      <w>180</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
